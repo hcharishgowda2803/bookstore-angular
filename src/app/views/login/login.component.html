@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="login-form">
+      <div class="card">
+        <div>
+          <div class="logo-animation">
+            <img  src="https://cdn.dribbble.com/users/1785433/screenshots/14967930/media/3436e5202a2f733cd5316be32a26abd7.gif" alt="">
+          </div>
+          <h3>Welcome</h3>
+          <small>Login to start buying books</small>
+        </div>
+        <form [formGroup]="loginForm">
+            <div>
+              <div class="form-group has-label">
+                <label for="username" class="control-label"></label>
+                <input type="email" class="form-control input" formControlName="email" id="username"
+                       placeholder="Please enter ur email">
+              </div>
+              <div class="form-group has-label">
+                <label for="password" class="control-label"></label>
+                <input type="text" formControlName="password" class="form-control input" id="password"
+                       placeholder="Password">
+              </div>
+            </div>
+          <div>
+            <button class="btn btn-primary btn-lg" (click)="login()">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</div>

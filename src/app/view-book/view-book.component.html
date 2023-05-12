@@ -1,0 +1,36 @@
+<div class="main-container">
+  <div class="sub-container">
+    <div *ngIf="book_details.book_title" style="text-align: center; font-size: larger; font-weight: bold; color: #333333">{{book_details.book_title}}</div>
+    <div class="image">
+      <img [src]="book_details.cover_image" alt="">
+    </div>
+    <div class="book-details">
+        <div class="label-list">
+            <div>Author <span>:</span></div>
+            <div>Genre<span>:</span></div>
+            <div>ISBN<span>:</span></div>
+            <div>Language<span>:</span></div>
+            <div>Rating<span>:</span></div>
+            <div>Price<span>:</span></div>
+            <div>Description<span>:</span></div>
+        </div>
+         <div class="details-values">
+           <div *ngIf="book_details.author_name">{{book_details.author_name}}</div>
+           <div *ngIf="book_details.book_genre">{{book_details.book_genre}}</div>
+           <div *ngIf="book_details.book_isbn">{{book_details.book_isbn}}</div>
+           <div *ngIf="book_details">{{"English"}}</div>
+           <div *ngIf="book_details.rating">{{book_details.rating}}/5</div>
+           <div *ngIf="book_details.price">{{book_details.price}}</div>
+           <div *ngIf="book_details.description">{{book_details.description.substring(0,12)+'....'}} <span style="color: #7427F5">more</span></div>
+         </div>
+    </div>
+    <div class="book-buttons">
+      <div>
+        <button class="buy">Buy Now</button>
+      </div>
+      <div>
+        <button class="cart">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>

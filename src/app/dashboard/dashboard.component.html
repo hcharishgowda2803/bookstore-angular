@@ -1,0 +1,20 @@
+<div class="banner">
+  <div class="heading">
+    <b>Welcome to Your Store</b><br>
+    <small>There is no friend as loyal as book...</small>
+  </div>
+</div>
+<div class="page-container">
+  <h3 class="tittle">BOOKS FOR YOU!!</h3>
+</div>
+<div class="books">
+  <div class="book" *ngFor="let book of bookData">
+    <img [src]="book.cover_image" alt="" (click)="navToDetails(book._id)">
+     <h4 *ngIf="book.book_title">{{book.book_title.length > 20 ? book.book_title.substring(0,21)+'...' : book.book_title}}</h4>
+      <h6 *ngIf="book.author_name">Author: {{book.author_name}}</h6>
+    <div class="buttons">
+        <button class="button-buy">Buy Now</button>
+        <button class="button-cart" (click)="addCart()">Add cart</button>
+    </div>
+  </div>
+</div>

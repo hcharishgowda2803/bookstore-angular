@@ -1,0 +1,31 @@
+<div class="">
+  <div class="nav-header" >
+    <nav [ngClass]="{'active':isActive}">
+      <div class="logo">
+        <img
+          src="https://cdn.dribbble.com/users/1785433/screenshots/14967930/media/3436e5202a2f733cd5316be32a26abd7.gif"
+          alt="">
+        <div class="tittle">
+          Books(U)want
+        </div>
+      </div>
+      <div class="burger-container"  (click)="active(isActive)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul>
+        <li>
+          <a routerLink="home">Home</a>
+        </li>
+        <li><a routerLink="cart">Cart</a></li>
+        <li><a href="">Orders</a></li>
+        <li><a href="">profile</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer">
+    copyright &copy; Books(U)want
+  </div>
+</div>
